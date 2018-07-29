@@ -50,6 +50,14 @@ fi
 
 export FPC_COMPILER="$(pwd)/fpc_bootstrap/ppc"
 
-make build PP=${FPC_COMPILER} > /dev/null 2>&1
-make install PP=${FPC_COMPILER} PREFIX=${PREFIX} > /dev/null 2>&1
+if [ `uname` = "Darwin" ]; then
 
+    make build PP=${FPC_COMPILER} > /dev/null 2>&1
+    make install PP=${FPC_COMPILER} PREFIX=${PREFIX} > /dev/null 2>&1
+
+else
+
+    make all OPT='-gl' PP=$(FPC_COMPILER)
+    $MAKE install PP=$(FPC_COMPILER) PREFIX=$(PREFIX)
+
+fi
