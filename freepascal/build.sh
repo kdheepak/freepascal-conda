@@ -19,7 +19,7 @@ if [ `uname` = "Darwin" ]; then
     wget https://downloads.sourceforge.net/project/freepascal/Bootstrap/3.0.0/x86_64-macosx-10.7-ppcx64.tar.bz2
     tar -xf x86_64-macosx-10.7-ppcx64.tar.bz2
     mkdir -p fpc_bootstrap
-    mv ./ppcx64 ./fpc_bootstrap/ppc
+    export FPC_COMPILER="$(pwd)/ppcx64"
 
 else
 
@@ -35,20 +35,20 @@ else
         wget https://downloads.sourceforge.net/project/freepascal/Bootstrap/2.6.4/i386-freebsd9-ppc386.bz2
         bzip2 -d i386-freebsd9-ppc386.bz2
         mkdir -p fpc_bootstrap
-        mv ./i386-freebsd9-ppc386 ./fpc_bootstrap/ppc
+        export FPC_COMPILER="$(pwd)/i386-freebsd9-ppc386"
 
     else
 
         wget https://downloads.sourceforge.net/project/freepascal/Bootstrap/2.6.4/x86_64-freebsd9-ppcx64.bz2
         bzip2 -d x86_64-freebsd9-ppcx64.bz2
         mkdir -p fpc_bootstrap
-        mv ./x86_64-freebsd9-ppcx64 ./fpc_bootstrap/ppc
+        export FPC_COMPILER="$(pwd)/x86_64-freebsd9-ppcx64"
 
     fi
 
 fi
 
-export FPC_COMPILER="$(pwd)/fpc_bootstrap/ppc"
+ls -al
 
 if [ `uname` = "Darwin" ]; then
 
