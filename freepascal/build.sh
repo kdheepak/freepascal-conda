@@ -42,7 +42,9 @@ else
 
         wget https://downloads.sourceforge.net/project/freepascal/Linux/3.0.2/fpc-3.0.2.x86_64-linux.tar
         tar -xvf fpc-3.0.2.x86_64-linux.tar
-        cd fpc-3.0.2.x86_64-linux && ./install.sh < ${PREFIX} </dev/null && cd ..
+        cd fpc-3.0.2.x86_64-linux
+        echo "${PREFIX}" | ./install.sh
+        cd ..
 
     fi
 
