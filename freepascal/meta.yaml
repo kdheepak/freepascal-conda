@@ -24,7 +24,7 @@ requirements:
 about:
   home: https://www.freepascal.org/
   license: GPL
-  license_file: LICENSE
+  license_file: compiler/COPYING.txt
   license_family: GPL
   summary: 'FreePascal'
   description: 'FreePascal'
