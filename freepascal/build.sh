@@ -10,7 +10,7 @@ tar -xf x86_64-macosx-10.7-ppcx64.tar.bz2
 mkdir -p fpc_bootstrap
 mv ./ppcx64 ./fpc_bootstrap/ppcx64
 
-export FPC_COMPILER="./fpc_bootstrap/ppcx64"
+export FPC_COMPILER="$(pwd)/fpc_bootstrap/ppcx64"
 
 make build PP=${FPC_COMPILER}
 make install PP=${FPC_COMPILER} PREFIX=${PREFIX}
