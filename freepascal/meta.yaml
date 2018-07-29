@@ -15,6 +15,9 @@ build:
   script_env:
       - CONDA_BLD_PATH
 
+test:
+  commands:
+    - fpc -h
 
 about:
   home: https://www.freepascal.org/
