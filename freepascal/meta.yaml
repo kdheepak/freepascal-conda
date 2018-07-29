@@ -36,9 +36,9 @@ requirements:
 
 about:
   home: https://www.freepascal.org/
-  license: GNU General Public License
+  license: GPL
   license_file: LICENSE
-  license_family: GNU General Public License
+  license_family: GPL
   summary: 'FreePascal'
   description: 'FreePascal'
 
