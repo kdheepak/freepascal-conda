@@ -32,17 +32,17 @@ else
 
     if [ "$CPU" = "i386" ]; then
 
-        wget https://downloads.sourceforge.net/project/freepascal/Bootstrap/2.6.4/i386-freebsd9-ppc386.bz2
-        bzip2 -d i386-freebsd9-ppc386.bz2
+        wget https://downloads.sourceforge.net/project/freepascal/Bootstrap/2.6.4/i386-freebsd11-ppc386.bz2
+        bzip2 -d i386-freebsd11-ppc386.bz2
         mkdir -p fpc_bootstrap
-        export FPC_COMPILER="$(pwd)/i386-freebsd9-ppc386"
+        export FPC_COMPILER="$(pwd)/i386-freebsd11-ppc386"
 
     else
 
-        wget https://downloads.sourceforge.net/project/freepascal/Bootstrap/2.6.4/x86_64-freebsd9-ppcx64.bz2
-        bzip2 -d x86_64-freebsd9-ppcx64.bz2
+        wget https://downloads.sourceforge.net/project/freepascal/Bootstrap/3.0.4/x86_64-freebsd11-ppcx64.bz2
+        bzip2 -d x86_64-freebsd11-ppcx64.bz2
         mkdir -p fpc_bootstrap
-        export FPC_COMPILER="$(pwd)/x86_64-freebsd9-ppcx64"
+        export FPC_COMPILER="$(pwd)/x86_64-freebsd11-ppcx64"
 
     fi
 
