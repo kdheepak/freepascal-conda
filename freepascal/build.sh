@@ -12,6 +12,6 @@ mv ./ppcx64 ./fpc_bootstrap/ppcx64
 
 export FPC_COMPILER="$(pwd)/fpc_bootstrap/ppcx64"
 
-make build PP=${FPC_COMPILER}
-make install PP=${FPC_COMPILER} PREFIX=${PREFIX}
+make build PP=${FPC_COMPILER} > /dev/null 2>&1
+make install PP=${FPC_COMPILER} PREFIX=${PREFIX} > /dev/null 2>&1
 
