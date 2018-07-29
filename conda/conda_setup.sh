@@ -21,15 +21,6 @@ else
 fi
 travis_retry wget "${URL}" -O miniconda.sh
 
-if [ ${TRAVIS_OS_NAME} == "osx" ]; then
-    echo ""
-    echo "Removing homebrew from Travis CI to avoid conflicts."
-    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > ~/uninstall_homebrew
-    chmod +x ~/uninstall_homebrew
-    ~/uninstall_homebrew -fq
-    rm ~/uninstall_homebrew
-fi
-
 chmod +x miniconda.sh
 ./miniconda.sh -b -p "${HOME}/miniconda"
 export PATH="${HOME}/miniconda/bin:${PATH}"
