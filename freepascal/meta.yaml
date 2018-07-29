@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://sourceforge.net/projects/freepascal/files/Source/3.0.4/fpc-3.0.4.source.tar.gz/download
+  url: https://downloads.sourceforge.net/project/freepascal/Source/3.0.4/fpc-3.0.4.source.tar.gz
   sha256: {{ checksum }}
 
 build:
@@ -18,21 +18,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - cmake >=3.4.0
-    - swig
-    - ninja
-    - boost-cpp
-    - zeromq
-    - python
-  host:
-    - python
-    - boost-cpp
-    - zeromq
   run:
     - python
-    - boost-cpp
-    - zeromq
 
 about:
   home: https://www.freepascal.org/
