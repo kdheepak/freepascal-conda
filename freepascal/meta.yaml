@@ -1,6 +1,6 @@
 {% set name = "freepascal" %}
 {% set version = "3.0.4" %}
-{% set checksum = "0786edb14f854d3c54da9882dcaaaec56d2370ec98abef44d211655065194e5f" %}
+{% set checksum = "69b3b7667b72b6759cf27226df5eb54112ce3515ff5efb79d95ac14bac742845" %}
 
 package:
   name: {{ name|lower }}
