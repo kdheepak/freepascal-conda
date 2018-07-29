@@ -40,11 +40,9 @@ else
 
     else
 
-        wget https://downloads.sourceforge.net/project/freepascal/Bootstrap/3.0.4/x86_64-freebsd11-ppcx64.bz2
-        bzip2 -d x86_64-freebsd11-ppcx64.bz2
-        mkdir -p fpc_bootstrap
-        export FPC_COMPILER="$(pwd)/x86_64-freebsd11-ppcx64"
-        chmod +x "${FPC_COMPILER}"
+        wget https://downloads.sourceforge.net/project/freepascal/Linux/3.0.2/fpc-3.0.2.x86_64-linux.tar
+        tar -xvf fpc-3.0.2.x86_64-linux.tar
+        cd fpc-3.0.2.x86_64-linux && ./install.sh < ${PREFIX} </dev/null && cd ..
 
     fi
 
@@ -59,7 +57,6 @@ if [ `uname` = "Darwin" ]; then
 
 else
 
-    make all OPT='-gl' PP=${FPC_COMPILER}
     $MAKE install PP=${FPC_COMPILER} PREFIX=${PREFIX}
 
 fi
