@@ -1,0 +1,47 @@
+{% set name = "freepascal" %}
+{% set version = "3.0.4" %}
+{% set checksum = "0786edb14f854d3c54da9882dcaaaec56d2370ec98abef44d211655065194e5f" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://sourceforge.net/projects/freepascal/files/Source/3.0.4/fpc-3.0.4.source.tar.gz/download
+  sha256: {{ checksum }}
+
+build:
+  number: 0
+  script_env:
+      - CONDA_BLD_PATH
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake >=3.4.0
+    - swig
+    - ninja
+    - boost-cpp
+    - zeromq
+    - python
+  host:
+    - python
+    - boost-cpp
+    - zeromq
+  run:
+    - python
+    - boost-cpp
+    - zeromq
+
+about:
+  home: https://www.freepascal.org/
+  license: GNU General Public License
+  license_file: LICENSE
+  license_family: GNU General Public License
+  summary: 'FreePascal'
+  description: 'FreePascal'
+
+extra:
+  recipe-maintainers:
+    - kdheepak

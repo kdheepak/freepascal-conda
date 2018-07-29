@@ -1,0 +1,3 @@
+# FreePascal conda
+[![](https://anaconda.org/kdheepak/freepascal/badges/platforms.svg)](https://anaconda.org/kdheepak/freepascal) [![](https://anaconda.org/kdheepak/freepascal/badges/latest_release_date.svg)](https://anaconda.org/kdheepak/freepascal) [![](https://anaconda.org/kdheepak/freepascal/badges/downloads.svg)](https://anaconda.org/kdheepak/freepascal) [![Build Status](https://www.travis-ci.org/kdheepak/freepascal-conda.svg?branch=master)](https://www.travis-ci.org/kdheepak/freepascal-conda) [![AppVeyor](https://img.shields.io/appveyor/ci/kdheepak/freepascal-conda.svg)](https://ci.appveyor.com/project/kdheepak/freepascal-conda)
+

@@ -1,0 +1,38 @@
+language: python
+matrix:
+  include:
+    - os: osx
+      language: generic
+      env: PYTHON_VERSION="2.7" PYTHON_ARCH="64"
+    - os: osx
+      language: generic
+      env: PYTHON_VERSION="3.5" PYTHON_ARCH="64"
+    - os: osx
+      language: generic
+      env: PYTHON_VERSION="3.6" PYTHON_ARCH="64"
+    - os: osx
+      language: generic
+      env: PYTHON_VERSION="3.7" PYTHON_ARCH="64"
+    - os: linux
+      env: PYTHON_VERSION="2.7" PYTHON_ARCH="64"
+    - os: linux
+      env: PYTHON_VERSION="3.5" PYTHON_ARCH="64"
+    - os: linux
+      env: PYTHON_VERSION="3.6" PYTHON_ARCH="64"
+    - os: linux
+      env: PYTHON_VERSION="3.7" PYTHON_ARCH="64"
+
+before_install:
+    - source "conda/conda_setup.sh"
+install:
+    - source "conda/conda_install.sh"
+
+script:
+  # Your test script goes here
+  - python --version
+
+after_success:
+  - test $TRAVIS_BRANCH = "master" && conda install conda-build && conda install anaconda-client && bash conda/conda_upload.sh
+
+notifications:
+    email: false
