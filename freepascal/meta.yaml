@@ -15,11 +15,6 @@ build:
   script_env:
       - CONDA_BLD_PATH
 
-requirements:
-  build:
-    - {{ compiler('c') }}
-  run:
-    - python
 
 about:
   home: https://www.freepascal.org/
