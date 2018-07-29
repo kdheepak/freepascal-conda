@@ -36,7 +36,7 @@ else
         bzip2 -d i386-freebsd11-ppc386.bz2
         mkdir -p fpc_bootstrap
         export FPC_COMPILER="$(pwd)/i386-freebsd11-ppc386"
-        chmod +x "$(FPC_COMPILER)"
+        chmod +x "${FPC_COMPILER}"
 
     else
 
@@ -44,7 +44,7 @@ else
         bzip2 -d x86_64-freebsd11-ppcx64.bz2
         mkdir -p fpc_bootstrap
         export FPC_COMPILER="$(pwd)/x86_64-freebsd11-ppcx64"
-        chmod +x "$(FPC_COMPILER)"
+        chmod +x "${FPC_COMPILER}"
 
     fi
 
