@@ -59,6 +59,6 @@ if [ `uname` = "Darwin" ]; then
 
 else
 
-    $MAKE install PP=${FPC_COMPILER} PREFIX=${PREFIX}
+    echo "Installed to ${PREFIX}"
 
 fi
