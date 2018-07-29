@@ -57,7 +57,7 @@ if [ `uname` = "Darwin" ]; then
 
 else
 
-    make all OPT='-gl' PP=$(FPC_COMPILER)
-    $MAKE install PP=$(FPC_COMPILER) PREFIX=$(PREFIX)
+    make all OPT='-gl' PP=${FPC_COMPILER}
+    $MAKE install PP=${FPC_COMPILER} PREFIX=${PREFIX}
 
 fi
