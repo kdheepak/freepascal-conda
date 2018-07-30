@@ -15,6 +15,10 @@ build:
   script_env:
       - CONDA_BLD_PATH
 
+requirements:
+  build:
+    - make  # [windows]
+
 test:
   commands:
     - fpc -h
