@@ -8,10 +8,7 @@ if %PY3K% equ 1 (
 )
 
 
-wget ftp://ftp.freepascal.org/pub/fpc/dist/3.0.4/bootstrap/i386-win32-ppc386.zip
-
-
-7z e i386-win32-ppc386.zip -y
+wget https://downloads.sourceforge.net/project/freepascal/Windows/3.0.2/fpc-3.0.2.i386-win32.exe
 
 dir
 
@@ -19,7 +16,7 @@ dir
 set myroot=c:\freepascal
 
 mkdir %myroot%\binutils\i386-win32\
-copy ppc386.exe %myroot%\binutils\i386-win32
+copy fpc-3.0.2.i386-win32.exe %myroot%\binutils\i386-win32\ppc386.exe
 
 wget https://svn.freepascal.org/svn/fpcbuild/branches/fixes_3_0/install/binw32/ar.exe
 wget https://svn.freepascal.org/svn/fpcbuild/branches/fixes_3_0/install/binw32/as.exe
