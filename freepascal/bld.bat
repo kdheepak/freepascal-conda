@@ -19,7 +19,7 @@ dir
 set myroot=c:\freepascal
 
 mkdir %myroot%\binutils\i386-win32\
-copy i386-win32-ppc386 %myroot%\binutils\i386-win32
+copy ppc386.exe %myroot%\binutils\i386-win32
 
 wget https://svn.freepascal.org/svn/fpcbuild/branches/fixes_3_0/install/binw32/ar.exe
 wget https://svn.freepascal.org/svn/fpcbuild/branches/fixes_3_0/install/binw32/as.exe
