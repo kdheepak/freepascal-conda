@@ -61,7 +61,7 @@ set PATH=%mybinutils%\i386-win32;%myFPC%\bin\i386-win32;%PATH%
 dir
 
 rd /s /q  examples
-make distclean all install INSTALL_PREFIX=%myFPC% PP=%mybinutils%\ppc386.exe DATA2INC=%myFPC%\utils\data2inc.exe
+make distclean all install INSTALL_PREFIX=%myFPC% PP=%mybinutils%\i386-win32\ppc386.exe DATA2INC=%myFPC%\utils\data2inc.exe
 cd /d %myFPC%\bin\i386-win32
 fpcmkcfg -d basepath=%myFPC% -o .\fpc.cfg
 copy fpc.exe %mybinutils%\i386-win32
