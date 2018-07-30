@@ -18,6 +18,8 @@ build:
 requirements:
   build:
     - make  # [windows]
+  host:
+    - make  # [windows]
 
 test:
   commands:
