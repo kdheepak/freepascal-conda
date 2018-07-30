@@ -56,8 +56,7 @@ wget https://svn.freepascal.org/svn/fpcbuild/branches/fixes_3_0/install/binw32/z
 
 set myFPC=%myroot%\fpc\3.0.4
 set mybinutils=%myroot%\binutils
-set PATH=%mybinutils%\i386-win32;%myFPC%\bin\i386-win32;%PATH%
-set PATH=.\;%PATH%
+set PATH=%cd%;%mybinutils%\i386-win32;%myFPC%\bin\i386-win32;%PATH%
 
 dir
 
