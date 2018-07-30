@@ -56,6 +56,7 @@ if [ `uname` = "Darwin" ]; then
 
     make build PP=${FPC_COMPILER} > /dev/null 2>&1
     make install PP=${FPC_COMPILER} PREFIX=${PREFIX} > /dev/null 2>&1
+    cp ${FPC_COMPILER} ${PREFIX}/bin/
 
 else
 
