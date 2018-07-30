@@ -55,7 +55,7 @@ set myFPC=%myroot%\fpc\3.0.4
 set mybinutils=%myroot%\binutils
 set PATH=%mybinutils%\i386-win32;%myFPC%\bin\i386-win32;%PATH%
 
-dir /s /b /o:gn
+dir
 
 rd /s /q  examples
 make distclean all install INSTALL_PREFIX=%myFPC% PP=%mybinutils%\ppc386.exe DATA2INC=%myFPC%\utils\data2inc.exe
