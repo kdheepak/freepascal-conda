@@ -11,5 +11,5 @@ if %PY3K% equ 1 (
 wget --no-check-certificate https://downloads.sourceforge.net/project/freepascal/Win32/3.0.4/fpc-3.0.4.i386-win32.exe
 fpc-3.0.4.i386-win32.exe /SUPPRESSMSGBOXES /SP- /DIR="%PREFIX%" /SILENT
 
-dir %LIBRARY_PREFIX%
-dir %PREFIX%
+dir %PREFIX%\bin
+dir %LIBRARY_PREFIX%\bin
