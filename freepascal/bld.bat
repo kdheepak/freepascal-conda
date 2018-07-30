@@ -9,7 +9,7 @@ if %PY3K% equ 1 (
 
 
 wget ftp://ftp.freepascal.org/pub/fpc/dist/3.0.4/bootstrap/i386-win32-ppc386.zip
-7z i386-win32-ppc386.zip
+7z i386-win32-ppc386.zip >nul 2>&1
 
 @echo on
 set myroot=%LIBRARY_PREFIX%
@@ -20,7 +20,6 @@ set PATH=%mybinutils%\i386-win32;%myFPC%\bin\i386-win32;%PATH%
 dir /s /b /o:gn
 
 rd /s /q  examples
-conda install -c anaconda make -y
 make distclean all install INSTALL_PREFIX=%myFPC% PP=.\ppc386.exe DATA2INC=%myFPC%\utils\data2inc.exe
 cd /d %myFPC%\bin\i386-win32
 fpcmkcfg -d basepath=%myFPC% -o .\fpc.cfg

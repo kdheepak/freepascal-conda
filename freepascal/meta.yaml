@@ -17,9 +17,9 @@ build:
 
 requirements:
   build:
-    - make  # [windows]
+    - make
   host:
-    - make  # [windows]
+    - make
 
 test:
   commands:
