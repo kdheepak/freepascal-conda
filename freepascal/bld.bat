@@ -7,6 +7,8 @@ if %PY3K% equ 1 (
   set PYTHON_VERSION="%PY_VER%"
 )
 
+conda install -c anaconda make
+
 wget ftp://ftp.freepascal.org/pub/fpc/dist/3.0.4/bootstrap/i386-win32-ppc386.zip
 7z i386-win32-ppc386.zip
 
