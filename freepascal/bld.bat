@@ -8,7 +8,7 @@ if %PY3K% equ 1 (
 )
 
 
-wget https://downloads.sourceforge.net/project/freepascal/Windows/3.0.2/fpc-3.0.2.i386-win32.exe
+wget --no-check-certificate https://downloads.sourceforge.net/project/freepascal/Windows/3.0.2/fpc-3.0.2.i386-win32.exe
 
 dir
 
