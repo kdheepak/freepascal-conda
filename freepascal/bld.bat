@@ -13,7 +13,7 @@ fpc-3.0.4.i386-win32.exe /SUPPRESSMSGBOXES /SP- /DIR="%PREFIX%" /SILENT
 
 timeout 60
 
-for %F in (%PREFIX%\i386-win32\bin\*.*) do move /Y %F %PREFIX%\bin
+xcopy /s %PREFIX%\i386-win32\bin\*.* %PREFIX%\bin
 
 dir %PREFIX%
 dir %LIBRARY_PREFIX%
