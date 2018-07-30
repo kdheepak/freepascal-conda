@@ -45,7 +45,7 @@ init:
 
 install:
 # Make sure the compiler is accessible
-- choco install make
+- choco install wget
 - '"%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" %PLATFORM%'
 - '"%CONDA%\Scripts\activate.bat"'
 - conda config --set always_yes yes --set changeps1 no
