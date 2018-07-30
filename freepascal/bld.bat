@@ -9,8 +9,11 @@ if %PY3K% equ 1 (
 
 
 wget ftp://ftp.freepascal.org/pub/fpc/dist/3.0.4/bootstrap/i386-win32-ppc386.zip
-7z i386-win32-ppc386.zip >nul 2>&1
 
+
+7z x i386-win32-ppc386.zip -y -o"./"
+
+dir
 
 @echo on
 set myroot=c:\freepascal
