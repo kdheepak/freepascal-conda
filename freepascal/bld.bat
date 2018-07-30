@@ -11,7 +11,7 @@ if %PY3K% equ 1 (
 wget ftp://ftp.freepascal.org/pub/fpc/dist/3.0.4/bootstrap/i386-win32-ppc386.zip
 
 
-7z x i386-win32-ppc386.zip -y -o"./"
+7z e i386-win32-ppc386.zip -y
 
 dir
 
